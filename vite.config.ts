@@ -7,6 +7,8 @@ const config: UserConfigFn = ({ mode }) => {
   return defineConfig({
     plugins: [react()],
     define: {
+      global: 'globalThis',
+
       process: {},
       'process.env': environment,
     },

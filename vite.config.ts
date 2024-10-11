@@ -1,4 +1,3 @@
-import inject from '@rollup/plugin-inject';
 import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv, UserConfigFn } from 'vite';
 
@@ -23,7 +22,7 @@ const config: UserConfigFn = ({ mode }) => {
       manifest: false,
       rollupOptions: {
         external: ['react-device-frameset/dist/styles/marvel-devices.min.css'],
-        plugins: [inject({ Buffer: ['buffer', 'Buffer'] })],
+        plugins: [],
       },
     },
   });

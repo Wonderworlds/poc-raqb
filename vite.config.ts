@@ -7,11 +7,8 @@ const config: UserConfigFn = ({ mode }) => {
   return defineConfig({
     plugins: [react()],
     define: {
-      global: 'globalThis',
-
       process: {},
       'process.env': environment,
-      Buffer: true,
     },
     server: {
       port: 3000,
@@ -22,7 +19,6 @@ const config: UserConfigFn = ({ mode }) => {
       manifest: false,
       rollupOptions: {
         external: ['react-device-frameset/dist/styles/marvel-devices.min.css'],
-        plugins: [],
       },
     },
   });
